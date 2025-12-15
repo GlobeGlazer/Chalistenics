@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --color-primary: #191919; /* Cambiado de #000000 a gris-negro */
-            --color-secondary: #FFFFFF;
-           --color-grey: #2A2A2A; /* Un poco más oscuro que el anterior */
---color-grey-light: #3A3A3A;
---color-grey-dark: #1F1F1F;
-            --color-grey-light: #4A5157; /* Ajustado */
-            --color-grey-dark: #262A2E; /* Ajustado */
+    --color-primary: #191919;
+    --color-secondary: #FFFFFF;
+    --color-accent: #2EAADC;
+    --color-accent-light: #5ABCEB;
+    --color-grey: #2A2A2A;
+    --color-grey-light: #3A3A3A;
+    --color-grey-dark: #1F1F1F;
+    --color-success: #4CAF50;
             --color-success: #4CAF50;
             --color-warning: #FF9800;
             --border-radius: 10px;
@@ -48,40 +49,75 @@
             overflow-x: hidden;
             min-height: 100vh;
         }
-
-        .container {
-            width: 100%;
-            max-width: 100%;
-            padding: var(--spacing-md);
-            margin: 0 auto;
-        }
-
         /* Header */
         .header {
-            background-color: var(--color-grey);
+            background-color: var(--color-primary);
             color: var(--color-secondary);
-            padding: var(--spacing-lg) var(--spacing-md);
+            padding: var(--spacing-xl) var(--spacing-md);
             text-align: center;
             border-bottom: 3px solid var(--color-accent);
-            margin-bottom: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: var(--shadow);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
 
         .header h1 {
-            font-size: var(--font-size-xl);
-            margin-bottom: var(--spacing-xs);
+            font-size: var(--font-size-xxl);
+            margin-bottom: var(--spacing-sm);
             color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .header p {
-            font-size: var(--font-size-sm);
+            font-size: var(--font-size-md);
             opacity: 0.9;
+                    /* Navegación principal */
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            flex-wrap: wrap;
+            padding: 0 var(--spacing-md);
         }
 
-        /* Navegación principal */
+        .nav-btn {
+            background-color: var(--color-grey);
+            color: var(--color-secondary);
+            border: none;
+            padding: var(--spacing-lg) var(--spacing-xl);
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-lg);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            font-weight: 700;
+            border: 2px solid transparent;
+            min-width: 160px;
+            justify-content: center;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--color-grey-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-btn.active {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            border-color: var(--color-accent);
+            box-shadow: 0 4px 8px rgba(46, 170, 220, 0.3);
+        }
+
+        .nav-btn i {
+            font-size: var(--font-size-xl);
+        }
         .main-nav {
             display: flex;
             justify-content: center;
