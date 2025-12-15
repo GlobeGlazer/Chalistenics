@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --color-primary: #2F3438; /* Cambiado de #000000 a gris-negro */
+            --color-primary: #191919; /* Cambiado de #000000 a gris-negro */
             --color-secondary: #FFFFFF;
-            --color-accent: #2EAADC; /* Cambiado de #FF6600 a azul */
-            --color-accent-light: #5ABCEB; /* Cambiado de #FF944D a azul claro */
-            --color-grey: #3A4045; /* Ajustado para combinar con fondo */
+           --color-grey: #2A2A2A; /* Un poco más oscuro que el anterior */
+--color-grey-light: #3A3A3A;
+--color-grey-dark: #1F1F1F;
             --color-grey-light: #4A5157; /* Ajustado */
             --color-grey-dark: #262A2E; /* Ajustado */
             --color-success: #4CAF50;
